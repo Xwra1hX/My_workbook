@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+     <h1>Student Information (GET request)</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required><br><br>
+
+        <label for="faculty">Faculty:</label>
+        <input type="text" id="faculty" name="faculty" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <h4>
+{
+  "name": "John"
+  "id": 78693    
+  "surname": "Doe"
+  "age": 21
+    "faculty": "Bachelor"
+}
+</h4>
+    
+<br><button onclick="getlocation()">Get location</button>
+<div id="location"></div>  
+<script>  
+    var x= document.getElementById("location");  
+    function getlocation() {  
+        if(navigator.geolocation){  
+            navigator.geolocation.getCurrentPosition(showPosition)  
+          }  
+        else  
+        {  
+             alert("Sorry! your browser is not supporting")  
+         } }  
+       
+     function showPosition(position){  
+       var x = "Your current location is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " +    position.coords.longitude + ")";  
+                document.getElementById("location").innerHTML = x;  
+     }  
+</script>  
+
+<h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cMIHLzuJ4Wg?si=ktedsIU1SUSG_Flu" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+    </iframe>
+    <h2>Салат меня бесит, а чай вкусный.</h2>
+</h1>
+</body>
+</html>
